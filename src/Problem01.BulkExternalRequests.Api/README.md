@@ -119,3 +119,22 @@ Endpoint used: `GET /users/{id}`
 - `IHttpClientFactory` via typed `HttpClient`
 - Partial failure handling (null filtering)
 - Dependency injection with interface abstractions
+
+---
+
+## 🚩 Important Improvement: Bounded Concurrency (Next Lesson)
+
+> **Current implementation has a real-world risk!**
+
+If you send 1,000 requests simultaneously, you may:
+
+- Exhaust available sockets (resource exhaustion)
+- Overload the external API (causing failures for others)
+- Hit rate limits (get blocked or throttled)
+
+**Next improvement:**
+
+- Limit the number of concurrent requests (bounded concurrency)
+- Use `SemaphoreSlim` or `Parallel.ForEachAsync` to control parallelism
+
+This is what senior engineers mention in interviews and is essential for production-grade systems.
