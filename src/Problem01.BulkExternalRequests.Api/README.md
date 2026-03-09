@@ -39,6 +39,26 @@ var results = await Task.WhenAll(tasks);
 
 ---
 
+### Why this is better than raw Task.WhenAll here
+
+#### Task.WhenAll
+
+**Good when:**
+- the number is small
+- you really want all tasks started immediately
+- you want a straightforward aggregation model
+
+#### Parallel.ForEachAsync
+
+**Better when:**
+- the input is large
+- you want controlled concurrency
+- you want more production-safe fan-out behavior
+
+The docs explicitly provide `ParallelOptions` support for controlling the operation, which is why this pattern fits your scenario well.
+
+---
+
 ## 🏗️ Architecture
 
 ```
