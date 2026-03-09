@@ -18,14 +18,26 @@ namespace Problem01.BulkExternalRequests.Api.Controllers
         }
 
         [HttpPost("users")]
-        public async Task<ActionResult<BulkFetchResponse>> FetchUsers(BulkFetchRequest request)
+        public async Task<ActionResult<BulkFetchResponse>> FetchUsers(
+            [FromBody] BulkFetchRequest request,
+            CancellationToken cancellationToken)
         {
-            var users = await _bulkFetchService.FetchUsersAsync(request.UserIds);
 
-            return Ok(new BulkFetchResponse
+            //var users = await _bulkFetchService.FetchUsersAsync(request.UserIds);
+
+            //return Ok(new BulkFetchResponse
+            //{
+            //    Users = users
+            //});
+
+            if (request.UserIds is null || request.UserIds.Count == 0)
             {
-                Users = users
-            });
+                return BadRequest("UserIds cannot be null or empty.");
+            }
+
+            var result = await _bulkFetchService.FetchUsersAsync(request.UserIds, cancellationToken);
+
+            return Ok(result);
         }
     }
 }

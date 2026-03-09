@@ -4,6 +4,6 @@ namespace Problem01.BulkExternalRequests.Api.Clients
 {
     public interface IExternalUserClient
     {
-        Task<ExternalUserDto> GetUserAsync(int userId);
+        Task<ExternalUserDto> GetUserAsync(int userId, CancellationToken cancellationToken = default);
     }
 }
