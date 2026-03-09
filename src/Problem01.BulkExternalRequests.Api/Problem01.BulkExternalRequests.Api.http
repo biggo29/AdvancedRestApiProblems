@@ -1,0 +1,6 @@
+@Problem01.BulkExternalRequests.Api_HostAddress = http://localhost:5164
+
+GET {{Problem01.BulkExternalRequests.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,69 @@
+# ============================================================
+# .NET / ASP.NET Core
+# ============================================================
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+!**/packages/build/
+
+# Publish output
+**/publish/
+**/PublishProfiles/
+
+# User secrets (never commit)
+**/secrets.json
+**/appsettings.Development.json
+
+# ============================================================
+# Visual Studio
+# ============================================================
+.vs/
+*.aps
+*.pch
+*.vspscc
+*.vssscc
+.builds
+*.pidb
+*.svclog
+*.scc
+
+# Rider
+.idea/
+*.sln.iml
+
+# VS Code
+.vscode/
+
+# ============================================================
+# Test results & coverage
+# ============================================================
+TestResults/
+coverage*/
+*.coveragexml
+*.coverage
+*.trx
+
+# ============================================================
+# OS generated
+# ============================================================
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# ============================================================
+# Logs
+# ============================================================
+*.log
+logs/

@@ -1,0 +1,10 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/BuildingBlocks/BuildingBlocks.csproj" />
+    <Project Path="src/Problem01.BulkExternalRequests.Api/Problem01.BulkExternalRequests.Api.csproj" Id="c9a2b3a8-4605-4239-84ea-4e98a92dacee" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Problem01.BulkExternalRequests.Api.IntegrationTests/Problem01.BulkExternalRequests.Api.IntegrationTests.csproj" />
+    <Project Path="tests/Problem01.BulkExternalRequests.Api.UnitTests/Problem01.BulkExternalRequests.Api.UnitTests.csproj" />
+  </Folder>
+</Solution>
